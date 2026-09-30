@@ -34,3 +34,4 @@ docker build -t attrition-risk .
 * Not something code can create: the git history, issues, PRs, code reviews and the 100-hour logs.
   Use `docs/hour_log_template.csv` and do the work in a real repo.
 * `data/raw/` is committed only so this bundle runs. In your repo, commit a download script + `CHECKSUMS.txt` instead.
+"# attrition-risk" 
