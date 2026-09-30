@@ -1,0 +1,1139 @@
+{
+ "audit_saudi": {
+  "raw_shape": [
+   1191,
+   35
+  ],
+  "missing_cells": 0,
+  "columns_with_label_variants": {
+   "Maritalstatus": {
+    "distinct_before": 4,
+    "distinct_after": 3
+   },
+   "Academic_degree": {
+    "distinct_before": 5,
+    "distinct_after": 4
+   },
+   "Years_Experience": {
+    "distinct_before": 10,
+    "distinct_after": 7
+   },
+   "Department": {
+    "distinct_before": 26,
+    "distinct_after": 23
+   },
+   "JobTitle": {
+    "distinct_before": 81,
+    "distinct_after": 71
+   }
+  },
+  "exact_duplicate_rows_excluding_ID": 1,
+  "attrition_yes_raw": 515,
+  "attrition_yes_preprocessed": 498,
+  "rows_raw": 1191,
+  "rows_preprocessed_tree": 1174,
+  "rows_preprocessed_nontree": 1174,
+  "row_gap": 17,
+  "gap_is_entirely_attrition_yes": true
+ },
+ "audit_ibm": {
+  "shape": [
+   1470,
+   31
+  ],
+  "prevalence": 0.16122448979591836,
+  "dropped_cols": [
+   "EmployeeCount",
+   "Over18",
+   "StandardHours",
+   "EmployeeNumber"
+  ]
+ },
+ "leakage_saudi_tree_jobtitle": {
+  "distinct_values": 51,
+  "auc_of_encoded_value_alone": 0.7458502649651862,
+  "auc_of_honest_cv_title_encoding_on_raw": 0.6787413109668523
+ },
+ "models": {
+  "ibm_full_features": {
+   "logreg": {
+    "raw": {
+     "roc_auc": 0.8037729347919719,
+     "pr_auc": 0.6243424753551239,
+     "prevalence": 0.1598639455782313,
+     "brier": 0.09497580552783638,
+     "ece": 0.06615698903893455
+    },
+    "calibrated": {
+     "roc_auc": 0.8037729347919719,
+     "pr_auc": 0.6243424753551239,
+     "prevalence": 0.1598639455782313,
+     "brier": 0.0965326050986269,
+     "ece": 0.07262780349385632
+    },
+    "pr_auc_ci95": [
+     0.48552456898596597,
+     0.7399675752225818
+    ]
+   },
+   "gbm": {
+    "raw": {
+     "roc_auc": 0.783702299939702,
+     "pr_auc": 0.5164606613673273,
+     "prevalence": 0.1598639455782313,
+     "brier": 0.10514046375214026,
+     "ece": 0.045146240592737336
+    },
+    "calibrated": {
+     "roc_auc": 0.783702299939702,
+     "pr_auc": 0.5164606613673273,
+     "prevalence": 0.1598639455782313,
+     "brier": 0.10534202072532033,
+     "ece": 0.04183422574979133
+    },
+    "pr_auc_ci95": [
+     0.38024888709530485,
+     0.6550364425670951
+    ]
+   },
+   "n_train_cal_test": [
+    882,
+    294,
+    294
+   ]
+  },
+  "ibm_contract": {
+   "logreg": {
+    "raw": {
+     "roc_auc": 0.7746145232147472,
+     "pr_auc": 0.4407520184102741,
+     "prevalence": 0.1598639455782313,
+     "brier": 0.11027106376514714,
+     "ece": 0.06177789541742544
+    },
+    "calibrated": {
+     "roc_auc": 0.7746145232147472,
+     "pr_auc": 0.4407520184102741,
+     "prevalence": 0.1598639455782313,
+     "brier": 0.11061884116996466,
+     "ece": 0.06294190600945712
+    },
+    "pr_auc_ci95": [
+     0.31916941265499615,
+     0.5893402911868951
+    ]
+   },
+   "gbm": {
+    "raw": {
+     "roc_auc": 0.7935653372383495,
+     "pr_auc": 0.460995715610989,
+     "prevalence": 0.1598639455782313,
+     "brier": 0.11309521588639443,
+     "ece": 0.055482066321623474
+    },
+    "calibrated": {
+     "roc_auc": 0.7935653372383495,
+     "pr_auc": 0.460995715610989,
+     "prevalence": 0.1598639455782313,
+     "brier": 0.11200260880684507,
+     "ece": 0.04911594505967516
+    },
+    "pr_auc_ci95": [
+     0.33750265645624755,
+     0.6115763358620961
+    ]
+   },
+   "n_train_cal_test": [
+    882,
+    294,
+    294
+   ]
+  },
+  "saudi_full_features": {
+   "logreg": {
+    "raw": {
+     "roc_auc": 0.884137635636779,
+     "pr_auc": 0.8758434720364161,
+     "prevalence": 0.4309623430962343,
+     "brier": 0.1339181564938405,
+     "ece": 0.025417012670080886
+    },
+    "calibrated": {
+     "roc_auc": 0.884137635636779,
+     "pr_auc": 0.8758434720364161,
+     "prevalence": 0.4309623430962343,
+     "brier": 0.1338521724212533,
+     "ece": 0.02353308351197398
+    },
+    "pr_auc_ci95": [
+     0.8114414388553388,
+     0.9207973175515535
+    ]
+   },
+   "gbm": {
+    "raw": {
+     "roc_auc": 0.9036264991433467,
+     "pr_auc": 0.8995748460055495,
+     "prevalence": 0.4309623430962343,
+     "brier": 0.12179369824057883,
+     "ece": 0.056266611785050956
+    },
+    "calibrated": {
+     "roc_auc": 0.9036264991433467,
+     "pr_auc": 0.8995748460055495,
+     "prevalence": 0.4309623430962343,
+     "brier": 0.12178490007560239,
+     "ece": 0.05798801479275134
+    },
+    "pr_auc_ci95": [
+     0.8409304908199686,
+     0.9335023768089632
+    ]
+   },
+   "n_train_cal_test": [
+    714,
+    238,
+    239
+   ]
+  },
+  "saudi_contract": {
+   "logreg": {
+    "raw": {
+     "roc_auc": 0.8592233009708737,
+     "pr_auc": 0.8715853651381374,
+     "prevalence": 0.4309623430962343,
+     "brier": 0.13612914282633207,
+     "ece": 0.07104211838814883
+    },
+    "calibrated": {
+     "roc_auc": 0.8592233009708737,
+     "pr_auc": 0.8715853651381374,
+     "prevalence": 0.4309623430962343,
+     "brier": 0.13406565705558052,
+     "ece": 0.06385963657785465
+    },
+    "pr_auc_ci95": [
+     0.8155715147528345,
+     0.9088682339312699
+    ]
+   },
+   "gbm": {
+    "raw": {
+     "roc_auc": 0.8588663620788122,
+     "pr_auc": 0.8745734807224208,
+     "prevalence": 0.4309623430962343,
+     "brier": 0.1339163440491634,
+     "ece": 0.06505320424599803
+    },
+    "calibrated": {
+     "roc_auc": 0.8588663620788122,
+     "pr_auc": 0.8745734807224208,
+     "prevalence": 0.4309623430962343,
+     "brier": 0.13373089616013323,
+     "ece": 0.06445632251209774
+    },
+    "pr_auc_ci95": [
+     0.8218557937579484,
+     0.9151367921719284
+    ]
+   },
+   "n_train_cal_test": [
+    714,
+    238,
+    239
+   ]
+  }
+ },
+ "importance": {
+  "ibm": {
+   "overtime": 0.104,
+   "travel": 0.0553,
+   "salary_level": 0.0522,
+   "job_sat": 0.0418,
+   "marital": 0.0412,
+   "env_sat": 0.037,
+   "tenure_band": 0.0289,
+   "exp_band": 0.0284,
+   "wlb": 0.0273,
+   "age_band": 0.0108,
+   "gender": 0.0078
+  },
+  "saudi": {
+   "exp_band": 0.3344,
+   "tenure_band": 0.2959,
+   "job_sat": 0.0277,
+   "wlb": 0.014,
+   "env_sat": 0.0113,
+   "age_band": 0.0102,
+   "salary_level": 0.009,
+   "gender": 0.0087,
+   "travel": 0.0048,
+   "overtime": 0.002,
+   "marital": -0.0006
+  },
+  "stability_spearman_ibm": 0.7558441558441559,
+  "stability_spearman_saudi": 0.8006493506493507
+ },
+ "saudi_retrospective_check": {
+  "attrition_rate_health_issues_yes": 0.5181347150259067,
+  "attrition_rate_health_issues_no": 0.41583166332665333,
+  "n_health_yes": 193,
+  "gbm_full_with_health": 0.8984804963520423,
+  "gbm_full_without_health": 0.8979864422358822,
+  "gbm_contract_no_tenure_no_exp": 0.6666944332739702
+ },
+ "fairness_ibm": {
+  "logreg": {
+   "overall": {
+    "roc_auc": 0.7902991229240883,
+    "pr_auc": 0.49244077383184365,
+    "prevalence": 0.16122448979591836,
+    "brier": 0.10714864606053437,
+    "ece": 0.031157289898767083
+   },
+   "gender": {
+    "table": [
+     {
+      "group": 0,
+      "n": 588,
+      "suppressed": false,
+      "prevalence": 0.148,
+      "auc": 0.801,
+      "selection_rate": 0.187,
+      "tpr": 0.621,
+      "fpr": 0.112,
+      "mean_pred": 0.148,
+      "calib_gap": 0.0
+     },
+     {
+      "group": 1,
+      "n": 882,
+      "suppressed": false,
+      "prevalence": 0.17,
+      "auc": 0.781,
+      "selection_rate": 0.209,
+      "tpr": 0.547,
+      "fpr": 0.139,
+      "mean_pred": 0.17,
+      "calib_gap": 0.0
+     }
+    ],
+    "gaps": {
+     "auc": 0.020551183293860742,
+     "tpr": 0.07402298850574718,
+     "fpr": 0.027567815189293535,
+     "selection_rate": 0.02154195011337867
+    }
+   },
+   "age_band": {
+    "table": [
+     {
+      "group": 0,
+      "n": 386,
+      "suppressed": false,
+      "prevalence": 0.259,
+      "auc": 0.834,
+      "selection_rate": 0.347,
+      "tpr": 0.75,
+      "fpr": 0.206,
+      "mean_pred": 0.239,
+      "calib_gap": -0.02
+     },
+     {
+      "group": 1,
+      "n": 619,
+      "suppressed": false,
+      "prevalence": 0.137,
+      "auc": 0.773,
+      "selection_rate": 0.174,
+      "tpr": 0.506,
+      "fpr": 0.122,
+      "mean_pred": 0.153,
+      "calib_gap": 0.015
+     },
+     {
+      "group": 2,
+      "n": 322,
+      "suppressed": false,
+      "prevalence": 0.106,
+      "auc": 0.713,
+      "selection_rate": 0.13,
+      "tpr": 0.471,
+      "fpr": 0.09,
+      "mean_pred": 0.119,
+      "calib_gap": 0.014
+     },
+     {
+      "group": 3,
+      "n": 143,
+      "suppressed": false,
+      "prevalence": 0.126,
+      "auc": 0.668,
+      "selection_rate": 0.07,
+      "tpr": 0.111,
+      "fpr": 0.064,
+      "mean_pred": 0.085,
+      "calib_gap": -0.041
+     }
+    ],
+    "gaps": {
+     "auc": 0.16603108003108002,
+     "tpr": 0.6388888888888888,
+     "fpr": 0.1422937062937063,
+     "selection_rate": 0.2772201891372876
+    }
+   },
+   "marital": {
+    "table": [
+     {
+      "group": "Divorced",
+      "n": 327,
+      "suppressed": false,
+      "prevalence": 0.101,
+      "auc": 0.837,
+      "selection_rate": 0.086,
+      "tpr": 0.485,
+      "fpr": 0.041,
+      "mean_pred": 0.103,
+      "calib_gap": 0.002
+     },
+     {
+      "group": "Married",
+      "n": 673,
+      "suppressed": false,
+      "prevalence": 0.125,
+      "auc": 0.679,
+      "selection_rate": 0.131,
+      "tpr": 0.369,
+      "fpr": 0.097,
+      "mean_pred": 0.126,
+      "calib_gap": 0.001
+     },
+     {
+      "group": "Single",
+      "n": 470,
+      "suppressed": false,
+      "prevalence": 0.255,
+      "auc": 0.819,
+      "selection_rate": 0.379,
+      "tpr": 0.742,
+      "fpr": 0.254,
+      "mean_pred": 0.253,
+      "calib_gap": -0.003
+     }
+    ],
+    "gaps": {
+     "auc": 0.1584805296301779,
+     "tpr": 0.3726190476190476,
+     "fpr": 0.21346938775510205,
+     "selection_rate": 0.29309649294033446
+    }
+   }
+  },
+  "gbm": {
+   "overall": {
+    "roc_auc": 0.782356504152679,
+    "pr_auc": 0.47932356299680723,
+    "prevalence": 0.16122448979591836,
+    "brier": 0.10891156732569365,
+    "ece": 0.018363695421945346
+   },
+   "gender": {
+    "table": [
+     {
+      "group": 0,
+      "n": 588,
+      "suppressed": false,
+      "prevalence": 0.148,
+      "auc": 0.806,
+      "selection_rate": 0.179,
+      "tpr": 0.54,
+      "fpr": 0.116,
+      "mean_pred": 0.15,
+      "calib_gap": 0.002
+     },
+     {
+      "group": 1,
+      "n": 882,
+      "suppressed": false,
+      "prevalence": 0.17,
+      "auc": 0.765,
+      "selection_rate": 0.214,
+      "tpr": 0.547,
+      "fpr": 0.146,
+      "mean_pred": 0.168,
+      "calib_gap": -0.002
+     }
+    ],
+    "gaps": {
+     "auc": 0.04047737951645225,
+     "tpr": 0.006436781609195363,
+     "fpr": 0.030406400314125837,
+     "selection_rate": 0.0357142857142857
+    }
+   },
+   "age_band": {
+    "table": [
+     {
+      "group": 0,
+      "n": 386,
+      "suppressed": false,
+      "prevalence": 0.259,
+      "auc": 0.823,
+      "selection_rate": 0.363,
+      "tpr": 0.75,
+      "fpr": 0.227,
+      "mean_pred": 0.252,
+      "calib_gap": -0.007
+     },
+     {
+      "group": 1,
+      "n": 619,
+      "suppressed": false,
+      "prevalence": 0.137,
+      "auc": 0.771,
+      "selection_rate": 0.163,
+      "tpr": 0.447,
+      "fpr": 0.118,
+      "mean_pred": 0.14,
+      "calib_gap": 0.003
+     },
+     {
+      "group": 2,
+      "n": 322,
+      "suppressed": false,
+      "prevalence": 0.106,
+      "auc": 0.694,
+      "selection_rate": 0.115,
+      "tpr": 0.353,
+      "fpr": 0.087,
+      "mean_pred": 0.107,
+      "calib_gap": 0.002
+     },
+     {
+      "group": 3,
+      "n": 143,
+      "suppressed": false,
+      "prevalence": 0.126,
+      "auc": 0.607,
+      "selection_rate": 0.112,
+      "tpr": 0.222,
+      "fpr": 0.096,
+      "mean_pred": 0.128,
+      "calib_gap": 0.003
+     }
+    ],
+    "gaps": {
+     "auc": 0.2165850815850815,
+     "tpr": 0.5277777777777778,
+     "fpr": 0.1404671717171717,
+     "selection_rate": 0.25080618863002285
+    }
+   },
+   "marital": {
+    "table": [
+     {
+      "group": "Divorced",
+      "n": 327,
+      "suppressed": false,
+      "prevalence": 0.101,
+      "auc": 0.834,
+      "selection_rate": 0.098,
+      "tpr": 0.455,
+      "fpr": 0.058,
+      "mean_pred": 0.101,
+      "calib_gap": 0.0
+     },
+     {
+      "group": "Married",
+      "n": 673,
+      "suppressed": false,
+      "prevalence": 0.125,
+      "auc": 0.687,
+      "selection_rate": 0.126,
+      "tpr": 0.369,
+      "fpr": 0.092,
+      "mean_pred": 0.128,
+      "calib_gap": 0.003
+     },
+     {
+      "group": "Single",
+      "n": 470,
+      "suppressed": false,
+      "prevalence": 0.255,
+      "auc": 0.789,
+      "selection_rate": 0.377,
+      "tpr": 0.692,
+      "fpr": 0.269,
+      "mean_pred": 0.25,
+      "calib_gap": -0.006
+     }
+    ],
+    "gaps": {
+     "auc": 0.14762905728222242,
+     "tpr": 0.3226190476190476,
+     "fpr": 0.21074829931972788,
+     "selection_rate": 0.2787364174637257
+    }
+   }
+  },
+  "protected_attribute_ablation": {
+   "with_protected": {
+    "auc": 0.7902991229240883,
+    "gender": {
+     "auc": 0.020551183293860742,
+     "tpr": 0.07402298850574718,
+     "fpr": 0.027567815189293535,
+     "selection_rate": 0.02154195011337867
+    },
+    "age_band": {
+     "auc": 0.16603108003108002,
+     "tpr": 0.6388888888888888,
+     "fpr": 0.1422937062937063,
+     "selection_rate": 0.2772201891372876
+    },
+    "marital": {
+     "auc": 0.1584805296301779,
+     "tpr": 0.3726190476190476,
+     "fpr": 0.21346938775510205,
+     "selection_rate": 0.29309649294033446
+    }
+   },
+   "without_protected": {
+    "auc": 0.7623733407249992,
+    "gender": {
+     "auc": 0.021470539230564967,
+     "tpr": 0.12620689655172407,
+     "fpr": 0.011092568960439753,
+     "selection_rate": 0.02097505668934238
+    },
+    "age_band": {
+     "auc": 0.20287956487956493,
+     "tpr": 0.4277777777777778,
+     "fpr": 0.10430769230769232,
+     "selection_rate": 0.20598572412043914
+    },
+    "marital": {
+     "auc": 0.1553405227914081,
+     "tpr": 0.1958874458874459,
+     "fpr": 0.02369148678146979,
+     "selection_rate": 0.03979640226360215
+    }
+   }
+  },
+  "threshold_tradeoff_gender": {
+   "single_threshold": {
+    "flag_rate": 0.19183673469387755,
+    "precision": 0.46099290780141844,
+    "recall": 0.5555555555555556,
+    "tpr_by_gender": {
+     "0": 0.5652173913043478,
+     "1": 0.5492957746478874
+    }
+   },
+   "group_thresholds": {
+    "flag_rate": 0.20408163265306123,
+    "precision": 0.43333333333333335,
+    "recall": 0.5555555555555556,
+    "thresholds": {
+     "1": 0.2292829368955592,
+     "0": 0.30407243213499036
+    },
+    "tpr_by_gender": {
+     "0": 0.4782608695652174,
+     "1": 0.6056338028169014
+    }
+   },
+   "target_tpr_matched_to_single": 0.5916666666666667
+  },
+  "flag_rate": 0.2
+ },
+ "fairness_saudi": {
+  "logreg": {
+   "overall": {
+    "roc_auc": 0.8222683403228586,
+    "pr_auc": 0.8306301788051271,
+    "prevalence": 0.4324097397145256,
+    "brier": 0.15414537257120697,
+    "ece": 0.033332257812953146
+   },
+   "gender": {
+    "table": [
+     {
+      "group": 0,
+      "n": 678,
+      "suppressed": false,
+      "prevalence": 0.392,
+      "auc": 0.789,
+      "selection_rate": 0.388,
+      "tpr": 0.65,
+      "fpr": 0.218,
+      "mean_pred": 0.392,
+      "calib_gap": 0.0
+     },
+     {
+      "group": 1,
+      "n": 513,
+      "suppressed": false,
+      "prevalence": 0.485,
+      "auc": 0.856,
+      "selection_rate": 0.532,
+      "tpr": 0.783,
+      "fpr": 0.295,
+      "mean_pred": 0.486,
+      "calib_gap": 0.0
+     }
+    ],
+    "gaps": {
+     "auc": 0.0671936446753908,
+     "tpr": 0.13275659027085784,
+     "fpr": 0.07700794351279791,
+     "selection_rate": 0.14425813797029452
+    }
+   },
+   "age_band": {
+    "table": [
+     {
+      "group": 0,
+      "n": 592,
+      "suppressed": false,
+      "prevalence": 0.454,
+      "auc": 0.779,
+      "selection_rate": 0.532,
+      "tpr": 0.74,
+      "fpr": 0.359,
+      "mean_pred": 0.454,
+      "calib_gap": -0.0
+     },
+     {
+      "group": 1,
+      "n": 459,
+      "suppressed": false,
+      "prevalence": 0.431,
+      "auc": 0.84,
+      "selection_rate": 0.403,
+      "tpr": 0.687,
+      "fpr": 0.188,
+      "mean_pred": 0.429,
+      "calib_gap": -0.002
+     },
+     {
+      "group": 2,
+      "n": 127,
+      "suppressed": false,
+      "prevalence": 0.331,
+      "auc": 0.914,
+      "selection_rate": 0.26,
+      "tpr": 0.714,
+      "fpr": 0.035,
+      "mean_pred": 0.356,
+      "calib_gap": 0.026
+     },
+     {
+      "group": 3,
+      "n": 13,
+      "suppressed": true,
+      "prevalence": NaN,
+      "auc": NaN,
+      "selection_rate": NaN,
+      "tpr": NaN,
+      "fpr": NaN,
+      "mean_pred": NaN,
+      "calib_gap": NaN
+     }
+    ],
+    "gaps": {
+     "auc": 0.1351300293155807,
+     "tpr": 0.05290826480417565,
+     "fpr": 0.3238390092879257,
+     "selection_rate": 0.2722520749095553
+    }
+   },
+   "marital": {
+    "table": [
+     {
+      "group": "Divorced",
+      "n": 25,
+      "suppressed": true,
+      "prevalence": NaN,
+      "auc": NaN,
+      "selection_rate": NaN,
+      "tpr": NaN,
+      "fpr": NaN,
+      "mean_pred": NaN,
+      "calib_gap": NaN
+     },
+     {
+      "group": "Married",
+      "n": 686,
+      "suppressed": false,
+      "prevalence": 0.415,
+      "auc": 0.847,
+      "selection_rate": 0.37,
+      "tpr": 0.688,
+      "fpr": 0.145,
+      "mean_pred": 0.416,
+      "calib_gap": 0.001
+     },
+     {
+      "group": "Single",
+      "n": 480,
+      "suppressed": false,
+      "prevalence": 0.454,
+      "auc": 0.772,
+      "selection_rate": 0.558,
+      "tpr": 0.752,
+      "fpr": 0.397,
+      "mean_pred": 0.455,
+      "calib_gap": 0.001
+     }
+    ],
+    "gaps": {
+     "auc": 0.07583328330653949,
+     "tpr": 0.06457427973603735,
+     "fpr": 0.25230816089547126,
+     "selection_rate": 0.1880709426627794
+    }
+   }
+  },
+  "gbm": {
+   "overall": {
+    "roc_auc": 0.8371818808525306,
+    "pr_auc": 0.846439674962415,
+    "prevalence": 0.4324097397145256,
+    "brier": 0.14817275515540002,
+    "ece": 0.04706861863306533
+   },
+   "gender": {
+    "table": [
+     {
+      "group": 0,
+      "n": 678,
+      "suppressed": false,
+      "prevalence": 0.392,
+      "auc": 0.785,
+      "selection_rate": 0.398,
+      "tpr": 0.639,
+      "fpr": 0.243,
+      "mean_pred": 0.393,
+      "calib_gap": 0.001
+     },
+     {
+      "group": 1,
+      "n": 513,
+      "suppressed": false,
+      "prevalence": 0.485,
+      "auc": 0.888,
+      "selection_rate": 0.519,
+      "tpr": 0.807,
+      "fpr": 0.246,
+      "mean_pred": 0.478,
+      "calib_gap": -0.007
+     }
+    ],
+    "gaps": {
+     "auc": 0.10250969491470074,
+     "tpr": 0.16813117130174837,
+     "fpr": 0.0034936746101794647,
+     "selection_rate": 0.12028843002294326
+    }
+   },
+   "age_band": {
+    "table": [
+     {
+      "group": 0,
+      "n": 592,
+      "suppressed": false,
+      "prevalence": 0.454,
+      "auc": 0.803,
+      "selection_rate": 0.507,
+      "tpr": 0.729,
+      "fpr": 0.322,
+      "mean_pred": 0.448,
+      "calib_gap": -0.007
+     },
+     {
+      "group": 1,
+      "n": 459,
+      "suppressed": false,
+      "prevalence": 0.431,
+      "auc": 0.863,
+      "selection_rate": 0.425,
+      "tpr": 0.722,
+      "fpr": 0.199,
+      "mean_pred": 0.435,
+      "calib_gap": 0.004
+     },
+     {
+      "group": 2,
+      "n": 127,
+      "suppressed": false,
+      "prevalence": 0.331,
+      "auc": 0.889,
+      "selection_rate": 0.291,
+      "tpr": 0.69,
+      "fpr": 0.094,
+      "mean_pred": 0.339,
+      "calib_gap": 0.008
+     },
+     {
+      "group": 3,
+      "n": 13,
+      "suppressed": true,
+      "prevalence": NaN,
+      "auc": NaN,
+      "selection_rate": NaN,
+      "tpr": NaN,
+      "fpr": NaN,
+      "mean_pred": NaN,
+      "calib_gap": NaN
+     }
+    ],
+    "gaps": {
+     "auc": 0.0853285082375741,
+     "tpr": 0.03814834483979468,
+     "fpr": 0.22786377708978328,
+     "selection_rate": 0.21541817407959146
+    }
+   },
+   "marital": {
+    "table": [
+     {
+      "group": "Divorced",
+      "n": 25,
+      "suppressed": true,
+      "prevalence": NaN,
+      "auc": NaN,
+      "selection_rate": NaN,
+      "tpr": NaN,
+      "fpr": NaN,
+      "mean_pred": NaN,
+      "calib_gap": NaN
+     },
+     {
+      "group": "Married",
+      "n": 686,
+      "suppressed": false,
+      "prevalence": 0.415,
+      "auc": 0.867,
+      "selection_rate": 0.404,
+      "tpr": 0.723,
+      "fpr": 0.177,
+      "mean_pred": 0.415,
+      "calib_gap": -0.001
+     },
+     {
+      "group": "Single",
+      "n": 480,
+      "suppressed": false,
+      "prevalence": 0.454,
+      "auc": 0.785,
+      "selection_rate": 0.515,
+      "tpr": 0.72,
+      "fpr": 0.344,
+      "mean_pred": 0.451,
+      "calib_gap": -0.003
+     }
+    ],
+    "gaps": {
+     "auc": 0.08204849880966558,
+     "tpr": 0.0026235313053275533,
+     "fpr": 0.1664540937732006,
+     "selection_rate": 0.11079324586977646
+    }
+   }
+  },
+  "protected_attribute_ablation": {
+   "with_protected": {
+    "auc": 0.8222683403228586,
+    "gender": {
+     "auc": 0.0671936446753908,
+     "tpr": 0.13275659027085784,
+     "fpr": 0.07700794351279791,
+     "selection_rate": 0.14425813797029452
+    },
+    "age_band": {
+     "auc": 0.1351300293155807,
+     "tpr": 0.05290826480417565,
+     "fpr": 0.3238390092879257,
+     "selection_rate": 0.2722520749095553
+    },
+    "marital": {
+     "auc": 0.07583328330653949,
+     "tpr": 0.06457427973603735,
+     "fpr": 0.25230816089547126,
+     "selection_rate": 0.1880709426627794
+    }
+   },
+   "without_protected": {
+    "auc": 0.8196874820474522,
+    "gender": {
+     "auc": 0.07842535800060846,
+     "tpr": 0.02663284717818637,
+     "fpr": 0.1126434245366284,
+     "selection_rate": 0.009832841691248817
+    },
+    "age_band": {
+     "auc": 0.11900081496108517,
+     "tpr": 0.0800865800865801,
+     "fpr": 0.18575851393188855,
+     "selection_rate": 0.15408863587997446
+    },
+    "marital": {
+     "auc": 0.07226242468623578,
+     "tpr": 0.004506679542893854,
+     "fpr": 0.10879290323808799,
+     "selection_rate": 0.07600826044703596
+    }
+   }
+  },
+  "threshold_tradeoff_gender": {
+   "single_threshold": {
+    "flag_rate": 0.3959731543624161,
+    "precision": 0.7457627118644068,
+    "recall": 0.6743295019157088,
+    "tpr_by_gender": {
+     "0": 0.6015037593984962,
+     "1": 0.75
+    }
+   },
+   "group_thresholds": {
+    "flag_rate": 0.37583892617449666,
+    "precision": 0.7678571428571429,
+    "recall": 0.6590038314176245,
+    "thresholds": {
+     "0": 0.33636423734721776,
+     "1": 0.4160145326597935
+    },
+    "tpr_by_gender": {
+     "0": 0.6466165413533834,
+     "1": 0.671875
+    }
+   },
+   "target_tpr_matched_to_single": 0.6929133858267716
+  },
+  "flag_rate": 0.45
+ },
+ "causal": {
+  "ibm": {
+   "overtime": {
+    "n": 1470,
+    "n_treated": 416,
+    "naive_diff": 0.20092413516274998,
+    "aipw_ate": 0.20495156535059136,
+    "ci95": [
+     0.15856674838551393,
+     0.2513363823156688
+    ],
+    "prop_min": 0.13731836125521493,
+    "prop_max": 0.5153112271271104,
+    "share_extreme_prop": 0.0,
+    "max_smd_before": 0.11864529972379395,
+    "max_smd_after_ipw": 0.014804268747200405,
+    "e_value_point": 5.3763494103068385
+   },
+   "stock_options": {
+    "n": 1470,
+    "n_treated": 839,
+    "naive_diff": -0.1451297578998468,
+    "aipw_ate": -0.1453432929147816,
+    "ci95": [
+     -0.2011970729260267,
+     -0.08948951290353649
+    ],
+    "prop_min": 0.02,
+    "prop_max": 0.98,
+    "share_extreme_prop": 0.45918367346938777,
+    "max_smd_before": 2.4163007504799947,
+    "max_smd_after_ipw": 1.080902989953981,
+    "e_value_point": 4.3803145638803125
+   },
+   "training_3plus": {
+    "n": 1470,
+    "n_treated": 798,
+    "naive_diff": -0.03743734335839599,
+    "aipw_ate": -0.03880521953199583,
+    "ci95": [
+     -0.07565464870760931,
+     -0.001955790356382353
+    ],
+    "prop_min": 0.30203472610337384,
+    "prop_max": 0.7977584887856584,
+    "share_extreme_prop": 0.0,
+    "max_smd_before": 0.1438984649118514,
+    "max_smd_after_ipw": 0.013479564538045033,
+    "e_value_point": 1.8598684742663658
+   }
+  },
+  "saudi": {
+   "overtime": {
+    "n": 1191,
+    "n_treated": 511,
+    "naive_diff": 0.010414987912973406,
+    "aipw_ate": -0.006775485630837998,
+    "ci95": [
+     -0.07863491691106766,
+     0.06508394564939166
+    ],
+    "prop_min": 0.02,
+    "prop_max": 0.98,
+    "share_extreme_prop": 0.01343408900083963,
+    "max_smd_before": 0.6637606642251613,
+    "max_smd_after_ipw": 0.541218769117757,
+    "e_value_point": 1.1439399711770155
+   },
+   "recognition": {
+    "n": 1191,
+    "n_treated": 768,
+    "naive_diff": -0.17630762411347517,
+    "aipw_ate": -0.15056510538619708,
+    "ci95": [
+     -0.23506828128380655,
+     -0.0660619294885876
+    ],
+    "prop_min": 0.02,
+    "prop_max": 0.98,
+    "share_extreme_prop": 0.014273719563392108,
+    "max_smd_before": 0.40105427584903214,
+    "max_smd_after_ipw": 0.3501870294620929,
+    "e_value_point": 2.1056225236900747
+   }
+  },
+  "synthetic_known_answer": {
+   "reps": 12,
+   "n": 3000,
+   "true_ate": -0.09148599220374755,
+   "naive_mean": 0.07677416839708145,
+   "naive_bias": 0.16826016060082902,
+   "aipw_mean": -0.08651410995639873,
+   "aipw_bias": 0.0049718822473488215,
+   "aipw_ci_coverage": 0.9166666666666666
+  }
+ },
+ "transfer": {
+  "ibm_to_saudi": {
+   "transfer_auc": 0.5855359912678807,
+   "transfer_pr_auc": 0.5099872910790144,
+   "target_prevalence": 0.4324097397145256,
+   "mean_predicted_risk": 0.18574565123450223,
+   "in_domain_auc": 0.8229031424139714,
+   "in_domain_pr_auc": 0.8302686108939283,
+   "ece_transfer": 0.2527202458402379
+  },
+  "saudi_to_ibm": {
+   "transfer_auc": 0.554013914126637,
+   "transfer_pr_auc": 0.18905055284480482,
+   "target_prevalence": 0.16122448979591836,
+   "mean_predicted_risk": 0.5485637336930418,
+   "in_domain_auc": 0.7884631836863195,
+   "in_domain_pr_auc": 0.4849909971474822,
+   "ece_transfer": 0.3873392438971234
+  }
+ },
+ "robustness_label_noise_pr_auc_ibm": {
+  "0.0": 0.460995715610989,
+  "0.05": 0.4701188474044603,
+  "0.1": 0.4255937619775612,
+  "0.2": 0.3889098963981787
+ }
+}
