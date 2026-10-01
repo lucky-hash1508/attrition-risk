@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 results/audit_log.jsonl
 .venv/
+data/raw/*.csv
+data/raw/*.xlsx
+__pycache__/
