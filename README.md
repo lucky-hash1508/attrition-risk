@@ -35,3 +35,4 @@ docker build -t attrition-risk .
   Use `docs/hour_log_template.csv` and do the work in a real repo.
 * `data/raw/` is committed only so this bundle runs. In your repo, commit a download script + `CHECKSUMS.txt` instead.
 "# attrition-risk" 
+Practice change
